@@ -1,0 +1,35 @@
+# Android runtime config, written by the start menu after the user selects
+# their own disc image (it fills the disc placeholder).
+[game]
+name = "Mizzurna Falls - The Chilling Cut (Cirosan)"
+id = "SLPS-01783"
+players = 1
+exe = "disc/SLPS017.83"
+discs = [
+  @@DISC1@@,
+]
+load_address = "0x80010000"
+entry_pc = "0x80079FBC"
+text_size = "0x00093800"
+stack_base = "0x801FFFF0"
+
+[recompiler]
+seeds = "seeds/ghidra_funcs.txt"
+out_dir = "generated"
+strict = true
+
+[runtime]
+idle_skip = true
+video_renderer = "software"
+overlay_cache = true
+
+[controller]
+default_mode = "digital"
+
+[bios]
+path = "bios/SCPH1001.BIN"
+
+
+[video]
+renderer = "opengl"
+gl_thread = true

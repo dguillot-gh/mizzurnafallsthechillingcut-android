@@ -1,0 +1,48 @@
+{
+  "format_version": 1,
+  "game": {
+    "name": "Mizzurna Falls - The Chilling Cut (Cirosan)",
+    "id": "SLPS-01783",
+    "boot_exe": "SLPS017.83"
+  },
+  "marketing": {
+    "description": "",
+    "publisher": "",
+    "year": "",
+    "region": "",
+    "players": 1
+  },
+  "rom_identity": {
+    "cue_name": "Mizzurna Falls - The Chilling Cut (Cirosan).cue",
+    "bin_name": "Mizzurna Falls - The Chilling Cut (Cirosan).bin",
+    "track_counts": [
+      1
+    ],
+    "require_cue": true,
+    "data_track": {
+      "size": 399426048,
+      "md5": "ba5202c09a727c8494be8e0e1e718050",
+      "sha1": "6e6156ef85c9a3bc49da8c21b7118a062e9d9d04",
+      "crc32": "e97f29f6"
+    },
+    "disc_fp": "c9ba83d8f4bf285e8080bf345d9539a6eb52f53e5a258f2fb55fcc358b16929a"
+  },
+  "exe": {
+    "load_address": "0x80010000",
+    "entry_pc": "0x80079FBC",
+    "text_size": "0x00093800",
+    "stack_base": "0x801FFFF0"
+  },
+  "seeds": {
+    "count": 1277,
+    "source": "boot_exe_jal"
+  },
+  "warnings": [
+    "cue has only 1 TRACK \u2014 Track-01-only dumps fail multi-track netplay/catalog gates; prefer a full Redump cue."
+  ],
+  "notes": [
+    "entry_pc/load_address/text_size/stack_base taken from PS-X EXE header.",
+    "seeds are first-pass boot-EXE JAL targets (+ entry); expect to grow as overlays / runtime paths are discovered.",
+    "required_disc_fp is psxrecomp-toc-v1 (matches runtime DiscIdentity)."
+  ]
+}

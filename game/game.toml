@@ -1,0 +1,54 @@
+# Autofilled by tools/new_project_layout/probe_disc.py from your legal dump.
+# Review before shipping. Runtime quirks / overlay seeds still need hand work.
+
+[game]
+name = "Mizzurna Falls - The Chilling Cut (Cirosan)"
+id = "SLPS-01783"
+players = 1
+exe = "disc/SLPS017.83"
+disc = "disc/Mizzurna Falls - The Chilling Cut (Cirosan).cue"
+load_address = "0x80010000"
+entry_pc = "0x80079FBC"
+text_size = "0x00093800"
+stack_base = "0x801FFFF0"
+
+# Digests are for data Track 01 (first BINARY FILE / TRACK 01).
+[prepare_disc]
+out_dir = "disc"
+bin_name = "Mizzurna Falls - The Chilling Cut (Cirosan).bin"
+cue_name = "Mizzurna Falls - The Chilling Cut (Cirosan).cue"
+boot_exe = "SLPS017.83"
+known_sizes = [399426048]
+known_md5 = [
+  "ba5202c09a727c8494be8e0e1e718050",
+]
+known_sha1 = [
+  "6e6156ef85c9a3bc49da8c21b7118a062e9d9d04",
+]
+known_crc32 = [
+  "e97f29f6",
+]
+
+[recompiler]
+seeds = "seeds/ghidra_funcs.txt"
+out_dir = "generated"
+strict = true
+
+[runtime]
+window_title = "Mizzurna Falls - The Chilling Cut (Cirosan) Recompiled"
+memcard_dir = "saves"
+overlay_cache = true
+
+[video]
+renderer = "opengl"
+aspect_ratio = "4:3"
+
+[controller]
+default_mode = "digital"
+
+# Online mount gate: digests + track count + optional TOC fingerprint
+# (see docs/NETPLAY.md).
+[netplay]
+require_cue = true
+required_tracks = 1
+required_disc_fp = "c9ba83d8f4bf285e8080bf345d9539a6eb52f53e5a258f2fb55fcc358b16929a"
